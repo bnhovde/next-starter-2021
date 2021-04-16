@@ -1,0 +1,11 @@
+.text-loader {
+  display: block;
+  overflow: hidden;
+  transition: opacity var(--transition);
+}
+
+/* Modifiers */
+
+.-loading {
+  opacity: 0.3;
+}

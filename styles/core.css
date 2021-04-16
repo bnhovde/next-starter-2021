@@ -1,0 +1,128 @@
+@import '~backpack.css';
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Safari viewport bug fix */
+  height: -webkit-fill-available;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-weight: normal;
+  font-family: var(--font-family);
+  color: var(--col-dark);
+  font-size: 1.8rem; /* Base font size = 18px */
+
+  min-height: 100vh; /* Fill entire height of page */
+  min-height: -webkit-fill-available; /* Safari viewport bug fix */
+}
+
+/* Global prefill styling for webkit (remove yellow fill) */
+:-webkit-autofill,
+:-webkit-autofill:hover,
+:-webkit-autofill:focus {
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong,
+blockquote,
+p,
+a {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Accessibility styles (when not using keyboard) */
+:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* Accessibility styles (when using keyboard) */
+.body--a11y *:focus {
+  outline: 0;
+  box-shadow: 0 0 0 8px var(--col-focus);
+}
+
+/* Text selection */
+::selection {
+  background: var(--col-2);
+}
+
+/* Modal and drawer helper class */
+.body--frozen {
+  overscroll-behavior: none;
+}
+
+/* Prevent animations on load */
+.body--preload * {
+  transition: none !important;
+}
+
+/* Highlight element (on error etc) */
+.highlight-element {
+  position: relative;
+}
+
+.highlight-element > * {
+  animation: highlight-flash 1s linear both;
+}
+
+.highlight-element:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 10px hsl(0deg 0% 100%), 0 0 0 20px var(--col-3-light);
+  border-radius: 1px;
+  animation: highlight-grow 3s linear both;
+}
+@keyframes highlight-flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.1;
+  }
+}
+@keyframes highlight-grow {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

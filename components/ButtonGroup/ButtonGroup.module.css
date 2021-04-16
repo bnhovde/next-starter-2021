@@ -1,0 +1,148 @@
+.button-group {
+  width: 100%;
+  position: relative;
+  overflow: auto hidden;
+  white-space: nowrap;
+  padding: var(--spacing-1) 0;
+}
+
+.button-group::-webkit-scrollbar {
+  display: none;
+}
+
+.inner {
+  display: block;
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+}
+
+.item:hover .label {
+  color: white;
+  background: var(--col-3);
+}
+
+.item + .item {
+  margin-left: var(--spacing-1);
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  height: 40px;
+  min-width: 60px;
+  padding: 0 var(--spacing-2);
+  color: var(--col-text);
+  border: 2px solid var(--col-3);
+  font-size: 14px;
+  line-height: 38px;
+  font-family: var(--font-family);
+  text-align: center;
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition);
+}
+@media (min-width: 48em) {
+  .label {
+    height: 48px;
+    line-height: 46px;
+    font-size: 16px;
+  }
+}
+
+.input {
+  opacity: 0;
+  position: absolute;
+}
+
+.input[disabled] {
+  pointer-events: none;
+}
+
+.input:checked ~ .label {
+  color: white;
+  font-weight: bold;
+  background: var(--col-3);
+  letter-spacing: -0.005em;
+}
+
+.input[disabled] ~ .label {
+  background: var(--col-gray);
+  cursor: not-allowed;
+  border-color: var(--col-gray);
+  color: white;
+  opacity: 0.5;
+}
+
+:global(.body--a11y) .input:focus ~ .label {
+  outline: 0;
+  box-shadow: 0 0 0 8px var(--col-focus);
+}
+
+/* Modifiers */
+
+.-full {
+  display: block;
+  width: 100%;
+}
+
+.-toggle .label {
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  line-height: 44px;
+  padding: 0 var(--spacing-3);
+}
+@media (min-width: 48em) {
+  .-toggle .label {
+    font-size: 20px;
+  }
+}
+
+.-toggle {
+  padding: var(--spacing-1);
+}
+
+.-no-padding {
+  padding: 0;
+  overflow: visible;
+}
+
+.-toggle .inner {
+  display: flex;
+}
+
+.-toggle .item {
+  flex: 1;
+}
+
+.-toggle .item + .item {
+  margin-left: 0;
+}
+
+.-toggle .item:first-child .label {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.-toggle .item:last-child .label {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.-wrap {
+  overflow: visible;
+  white-space: initial;
+}
+.-wrap .inner {
+  text-align: left;
+}
+.-wrap .item {
+  margin-left: 0;
+  margin-right: var(--spacing-1);
+  margin-bottom: var(--spacing-1);
+}

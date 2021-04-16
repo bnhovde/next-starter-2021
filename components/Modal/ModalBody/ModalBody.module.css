@@ -1,0 +1,9 @@
+.body {
+  flex-grow: 1;
+}
+
+@-moz-document url-prefix() {
+  .body {
+    padding-bottom: 88px;
+  }
+}

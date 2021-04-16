@@ -1,0 +1,82 @@
+/**
+* Global variables.
+*/
+
+:root {
+  /**
+ * Colors.
+ */
+  --col-1: #73a580;
+  --col-2: #f4a698;
+  --col-3: #f48668;
+
+  --col-dark: #303030;
+  --col-light: #fff;
+  --col-gray: #e6e6e6;
+
+  --col-focus: #5ece83;
+  --col-warning: #dd614a;
+
+  /**
+ * Spacing.
+ */
+
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --spacing-5: 32px;
+  --spacing-6: 40px;
+  --spacing-7: 48px;
+
+  /**
+ * General.
+ */
+
+  --transition: 0.2s cubic-bezier(0, 0, 0.3, 0.9);
+  --transition-quick: 0.1s cubic-bezier(0, 0, 0.3, 0.9);
+  --border-radius: 4px;
+
+  --page-width-wide: 1560px;
+  --page-width-regular: 1300px;
+  --page-width-narrow: 750px;
+  --page-width-min: 480px;
+
+  --font-family: 'FontName', sans-serif;
+  --font-family-alt: 'FontNameAlt', sans-serif;
+
+  /**
+ * Responsive variables.
+ */
+
+  --small: '(min-width: 20em)' /* from 320px to X */;
+  --medium: '(min-width: 48em)' /* from 768px to X */;
+  --large: '(min-width: 67.5em)' /* from 1080px to X */;
+  --xlarge: '(min-width: 83em)' /* from 1328px to X */;
+
+  --max-small: '(max-width: 19.938em)' /* from 0 to 320px */;
+  --max-medium: '(max-width: 47.938em)' /* from 0 to 768px */;
+  --max-large: '(max-width: 67.438em)' /* from 0 to 1080px */;
+  --max-xlarge: '(max-width: 82.938em)'; /* from 0 to 1328px */
+}
+
+/**
+ * Responsive variables.
+ */
+
+:root {
+  --page-gutters-responsive: 16px;
+  --grid-gutters-responsive: 12px;
+  --header-height: 80px;
+  --footer-height: 100px;
+  --modal-offset-top: 48px;
+}
+@media (min-width: 48em) {
+  :root {
+    --page-gutters-responsive: 60px;
+    --grid-gutters-responsive: 24px;
+    --header-height: 120px;
+    --footer-height: 120px;
+    --modal-offset-top: 120px;
+  }
+}

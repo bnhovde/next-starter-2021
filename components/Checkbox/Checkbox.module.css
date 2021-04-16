@@ -1,0 +1,72 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--spacing-2);
+}
+
+.text small:first-child {
+  margin-top: 2px;
+}
+
+.label,
+.focus {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.icon {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: filter var(--transition), transform var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.input {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+:global(.body--a11y) .input:focus ~ .focus {
+  outline: 0;
+  box-shadow: 0 0 0 8px var(--col-focus);
+}
+
+/* Modifiers */
+
+.-disabled {
+  cursor: not-allowed;
+}
+
+.-disabled .icon {
+  opacity: 0.25;
+  filter: grayscale(1);
+  cursor: not-allowed;
+}

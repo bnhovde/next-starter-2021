@@ -1,0 +1,20 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+  z-index: 1;
+}
+
+.actions {
+  display: flex;
+  padding: var(--spacing-3) 0;
+}
+
+.actions button:last-child {
+  flex: 1;
+}
+
+.actions button + button {
+  margin-left: var(--spacing-3);
+}

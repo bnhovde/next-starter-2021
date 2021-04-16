@@ -1,0 +1,28 @@
+
+.quantity {
+  display: flex;
+  position: relative;
+}
+
+.button {
+  display: block;
+  border: 0;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+.button:hover {
+  opacity: 0.8;
+}
+
+.input {
+  border: 0;
+  display: block;
+  width: 36px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  font-weight: bold;
+  color: var(--col-dark);
+  background: transparent;
+}

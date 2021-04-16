@@ -1,0 +1,14 @@
+.header {
+  position: relative;
+  width: 100%;
+  background: white;
+}
+
+.inner {
+  display: flex;
+  width: 100%;
+  height: var(--header-height);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--page-gutters-responsive);
+}

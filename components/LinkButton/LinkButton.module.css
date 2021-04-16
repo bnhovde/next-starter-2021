@@ -1,0 +1,52 @@
+.link {
+  display: inline;
+  font-size: 18px;
+  line-height: 19px;
+  white-space: nowrap;
+  border: 0;
+}
+@media (min-width: 48em) {
+  .link {
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+
+.link > span {
+  text-decoration: underline;
+}
+
+.-block {
+  display: inline-block;
+}
+
+.-active {
+  color: var(--col-1);
+}
+
+.-warning {
+  color: var(--col-3);
+}
+
+.-disabled {
+  cursor: not-allowed;
+}
+
+.-underlined {
+  border-bottom: 0;
+}
+.-underlined > * {
+  text-decoration: underline;
+}
+
+.-no-underline {
+  border-bottom: 0;
+}
+.-no-underline > span {
+  text-decoration: none;
+}
+
+.-full {
+  display: block;
+  margin: 0 auto;
+}

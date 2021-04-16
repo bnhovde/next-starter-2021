@@ -1,0 +1,30 @@
+.button {
+  position: absolute;
+  display: block;
+  height: 0px;
+  width: 0px;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+  text-decoration: underline;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+@media (min-width: 48em) {
+  .button {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.button:focus {
+  position: relative;
+  opacity: 1;
+  height: auto;
+  width: auto;
+  clip: unset;
+  clip-path: unset;
+  margin: var(--spacing-2) auto;
+}

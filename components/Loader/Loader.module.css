@@ -1,0 +1,52 @@
+.loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--col-1);
+  padding-bottom: var(--header-height);
+}
+
+.spinner {
+  position: relative;
+  height: 64px;
+  width: 64px;
+  min-width: 64px;
+  padding: 2px;
+  border: 2px solid currentColor;
+  animation: rotate 1.4s cubic-bezier(0.61, 0.01, 0.22, 0.98) infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  90%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modifiers */
+
+.-compressed {
+  min-height: auto;
+}
+.-compressed .inner {
+  padding-bottom: 0;
+}
+
+.-half-page {
+  min-height: 30vh;
+}
+.-half-page .inner {
+  padding-bottom: 0;
+}

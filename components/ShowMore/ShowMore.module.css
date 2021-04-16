@@ -1,0 +1,17 @@
+.show-more {
+  display: block;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all var(--transition);
+  cursor: pointer;
+  border: 0;
+}
+
+.button > p {
+  margin-right: var(--spacing-1);
+}

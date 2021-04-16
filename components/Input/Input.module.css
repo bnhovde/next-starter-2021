@@ -1,0 +1,153 @@
+.input {
+  position: relative;
+  display: inline-block;
+}
+
+/* Elements */
+
+.field {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  font-family: var(--font-family);
+  appearance: none;
+  color: var(--col-black);
+  background: var(--col-light);
+  border-radius: var(--border-radius);
+  padding: 0 var(--spacing-3);
+  height: 52px;
+  border: 2px solid var(--col-gray);
+  transition: all var(--transition);
+}
+
+.field:hover {
+  border-color: var(--col-dark);
+}
+.field:hover ~ .shadow {
+  opacity: 1;
+}
+
+.field:focus {
+  border-color: var(--col-1);
+  box-shadow: none;
+}
+
+.field::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: all var(--transition);
+}
+
+.message {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: left;
+}
+
+.placeholder-wrapper {
+  position: absolute;
+  top: 15px;
+  padding-top: 2px;
+  padding-left: 18px;
+  max-width: 95%;
+  overflow: hidden;
+  color: var(--col-gray);
+  font-size: 16px;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  transform-origin: top left;
+  transition: transform var(--transition);
+}
+
+.placeholder {
+  display: block;
+  color: var(--col-dark);
+  font-size: 16px;
+  line-height: 20px;
+  pointer-events: none;
+  transform-origin: left;
+  opacity: 0.66;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.field:focus ~ .placeholder-wrapper,
+.-touched .placeholder-wrapper {
+  transform: translateY(-27px);
+}
+.field:focus ~ .placeholder-wrapper > .placeholder,
+.-touched .placeholder {
+  transform: scale(0.623) translateX(4px);
+  opacity: 1;
+}
+
+.border-hider {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  background: white;
+  height: 2px;
+  padding: 0 3px 0 2px;
+
+  /* We use the transparent placeholder here to match the width */
+  font-size: 10px;
+  color: transparent;
+  pointer-events: none;
+  overflow: hidden;
+  transition: transform var(--transition);
+  transform: scaleX(0);
+}
+.field:focus ~ .border-hider,
+.-touched .border-hider {
+  transform: scaleX(1);
+}
+
+/* Modifiers */
+
+.-error .field {
+  background: var(--col-3-light);
+  border-color: var(--col-3);
+}
+
+.-success .field {
+  border-color: var(--col-focus);
+}
+
+.-full {
+  display: block;
+}
+
+.-touched .field {
+  border-color: var(--col-dark);
+}
+.-touched .field:focus {
+  border-color: var(--col-1);
+}
+.-touched.-error .field {
+  border-color: var(--col-3);
+}
+.-touched.-success .field {
+  border-color: var(--col-focus);
+}
+
+.-disabled .field {
+  border-color: 2px solid #808080;
+  background-color: #f1f1ef;
+}
+
+.-show-message .field:hover ~ .shadow {
+  opacity: 0;
+}

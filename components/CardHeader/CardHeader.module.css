@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2);
+}
+@media (min-width: 48em) {
+  .header {
+    margin-bottom: var(--spacing-4);
+  }
+}

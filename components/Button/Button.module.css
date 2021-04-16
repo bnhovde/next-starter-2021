@@ -1,0 +1,60 @@
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  height: 48px;
+  min-width: 90px;
+  padding: 0 var(--spacing-2);
+  color: var(--col-light);
+  background: var(--col-1);
+  font-size: 18px;
+  font-family: var(--font-family);
+  text-align: center;
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  border: 0;
+  transition: background var(--transition);
+}
+@media (min-width: 48em) {
+  .button {
+    font-size: 20px;
+  }
+}
+
+.button:hover {
+  background: var(--col-2);
+}
+
+.button:active {
+  background: var(--col-2);
+}
+
+/* Modifiers */
+
+.-full {
+  display: block;
+  width: 100%;
+}
+
+.-link {
+  line-height: 47px;
+}
+.-link:hover {
+  color: var(--col-light);
+}
+
+.-disabled {
+  background: var(--col-gray);
+  pointer-events: none;
+}
+
+.-disabled:hover {
+  background: var(--col-gray);
+}
+
+.button[disabled] {
+  cursor: not-allowed;
+}

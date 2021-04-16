@@ -1,0 +1,16 @@
+.error {
+  display: flex;
+  background: var(--col-3-light);
+  padding: var(--spacing-2);
+  border-bottom: 2px solid var(--col-3);
+}
+
+.icon {
+  display: block;
+  margin-right: var(--spacing-2);
+}
+
+.body {
+  flex: 1;
+  text-align: left;
+}

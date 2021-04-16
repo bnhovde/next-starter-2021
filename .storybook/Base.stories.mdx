@@ -1,0 +1,62 @@
+import { Story } from '@storybook/addon-docs/blocks';
+import Block from "../components/Block";
+
+<Meta title="Base" />
+
+<Story name="Intro">
+    <div style={{ margin: '3em' }}>
+        <Block top={4}>
+            <strong>Style-guide and component library</strong>
+        </Block>
+    </div>
+</Story>
+
+<Story name="Typography">
+    <div style={{ margin: '3em' }}>
+        <div className="sb-font-wrapper">
+            <h1>Headline h1</h1>
+        </div>
+        <div className="sb-font-wrapper">
+            <h2>Headline h2</h2>
+        </div>
+        <div className="sb-font-wrapper">
+            <h3>Headline h3</h3>
+        </div>
+        <div className="sb-font-wrapper">
+            <strong>Strong/strong>
+        </div>
+        <div className="sb-font-wrapper">
+            <p>Body copy</p>
+        </div>
+        <div className="sb-font-wrapper">
+            <small>Small</small>
+        </div>
+    </div>
+</Story>
+
+<Story name="Colors">
+    <div style={{ margin: '3em' }}>
+        <div className="sb-colors">
+            <div className="sb-color" style={{ background: "var(--col-1)" }}>
+                <span>col-1</span>
+            </div>
+            <div className="sb-color" style={{ background: "var(--col-2)" }}>
+                <span>col-2</span>
+            </div>
+            <div className="sb-color" style={{ background: "var(--col-3)" }}>
+                <span>col-3</span>
+            </div>
+        </div>
+        <div className="sb-colors">
+            <div className="sb-color-small" style={{ background: "var(--col-light)" }}>
+                <span>col-light</span>
+            </div>
+            <div className="sb-color-small" style={{ background: "var(--col-dark)" }}>
+                <span>col-dark</span>
+            </div>
+            <div className="sb-color-small" style={{ background: "var(--col-focus)" }}>
+                <span>col-focus</span>
+            </div>
+        </div>
+    </div>
+</Story>

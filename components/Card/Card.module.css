@@ -1,0 +1,37 @@
+.card {
+  background: var(--col-gray);
+  padding: var(--spacing-3);
+  border-radius: 4px;
+}
+@media (min-width: 48em) {
+  .card {
+    padding: var(--spacing-4);
+  }
+}
+
+/* Modifiers */
+
+.-full {
+  width: 100%;
+}
+
+.-outlined {
+  background: var(--col-light);
+  border: 2px solid var(--col-1);
+}
+
+.-animated {
+  animation: enter 1s cubic-bezier(0.17, 0.76, 0.24, 0.95) forwards;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    translate: none;
+  }
+}

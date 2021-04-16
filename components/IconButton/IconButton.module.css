@@ -1,0 +1,44 @@
+.icon-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.icon-button[disabled] {
+  opacity: 0.25;
+  filter: grayscale(1);
+  cursor: not-allowed;
+}
+
+.icon {
+  border-radius: 50%;
+  overflow: hidden;
+  transition: filter var(--transition), transform var(--transition);
+}
+
+.icon-button:active .icon {
+  transform: scale(0.9);
+}
+
+/* Modifiers */
+
+.-square {
+  border-radius: 0%;
+}
+
+.-has-text {
+  border-radius: 0;
+}
+
+.-has-text .icon {
+  margin-right: var(--spacing-1);
+}
+
+.text {
+  text-decoration: underline;
+  color: var(--col-dark);
+}
