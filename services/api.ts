@@ -1,39 +1,7 @@
 import Router from 'next/router';
 import { getExpiry } from 'utilities/clientCookie';
 
-import {
-  Address,
-  AddressSearchResponse,
-  Store,
-  Deal,
-  Point,
-  Product,
-  User,
-  UserSegment,
-  Order,
-  GetOrdersResponse,
-  ApiError,
-  ReturnType,
-  PaymentDetails,
-  CheckPhoneResponse,
-  PaymentAdditionalDetails,
-  OrderPriceResponse,
-  PaymentMethodResponse,
-  PaymentMethodRequest,
-  PayOrderResponse,
-  OrderTrackResponse,
-  CreateUser,
-  CartItem,
-  WaitTimes,
-  StoreStatus,
-  Organisation,
-  OrganisationDetails,
-  OrganisationUser,
-  OrganisationUserInvitation,
-  OrganisationSearchResponse,
-  AddUserResponse,
-  UserDiscount,
-} from 'types';
+import { ApiError, ReturnType } from 'types';
 
 const url = '/api';
 
