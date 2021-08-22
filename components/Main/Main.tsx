@@ -10,7 +10,7 @@ type Props = {
 
 Router.events.on('routeChangeComplete', (url) => {
   if (!isProduction) return;
-  window.analytics.page(url);
+  // window.analytics.page(url);
 });
 
 const Main: React.FC<Props> = ({ children }) => <main className={styles.main}>{children}</main>;

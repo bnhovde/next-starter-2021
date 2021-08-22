@@ -34,7 +34,7 @@ class FocusTrapWrapper extends Component<FocusTrapType> {
       [styles['wrapper']]: true,
     });
 
-    const checkIfShouldClose = (event: MouseEvent): boolean => {
+    const checkIfShouldClose = (event: MouseEvent | TouchEvent): boolean => {
       // Don't close modal if notification is clicked
       try {
         const notificationContainer = document.querySelector('#notifications-container');
@@ -48,7 +48,7 @@ class FocusTrapWrapper extends Component<FocusTrapType> {
       }
     };
 
-    const checkIfClickAllowed = (event: MouseEvent): boolean => {
+    const checkIfClickAllowed = (event: MouseEvent | TouchEvent): boolean => {
       // Don't close modal if notification is clicked
       try {
         const notificationContainer = document.querySelector('#notifications-container');

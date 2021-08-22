@@ -1,21 +1,6 @@
 /// <reference types="next" />
 /// <reference types="next/types/global" />
+/// <reference types="next/image-types/global" />
 
-declare namespace NodeJS {
-  interface Global {
-    analytics: {
-      track: (name: string, data: T) => void;
-      identify: (id: number, user: User) => void;
-    };
-  }
-}
-
-/* eslint-disable */
-interface Window {
-  analytics: {
-    page: (url: string) => void;
-    load: (id?: string) => void;
-  };
-  ReactNativeWebView: any;
-  isRNWebView: any;
-}
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/basic-features/typescript for more information.

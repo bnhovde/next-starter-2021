@@ -34,8 +34,6 @@ const Icon: React.FC<Props> = ({ type, size, name, padded, inverted, paddedExtra
   const baseUrl = `https://cdnurl.io/${process.env.BUCKET_ID}/`;
   const widthParam = size ? sizeMap[size] : 32;
 
-  console.log(match);
-
   return (
     <div className={iconClass}>
       {match && (

@@ -11,8 +11,7 @@
     "storybook": "start-storybook --no-dll -s ./public -p 6006",
     "build-storybook": "build-storybook --no-dll -s ./public",
     "check-types": "./node_modules/.bin/tsc --noemit",
-    "eslint": "./node_modules/.bin/eslint . --ext .ts,.tsx",
-    "lint": "npm run check-types && npm run eslint",
+    "lint": "npm run check-types && next lint",
     "test": "npm run cypress",
     "jest": "jest --watch"
   },
@@ -34,8 +33,6 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.15",
-    "@next/bundle-analyzer": "^10.1.3",
     "@storybook/addon-actions": "^6.2.8",
     "@storybook/addon-essentials": "^6.2.8",
     "@storybook/addon-links": "^6.2.8",
@@ -46,21 +43,14 @@
     "@types/node": "^14.14.41",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "babel-jest": "^26.6.3",
-    "babel-loader": "^8.2.2",
-    "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.2.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.0.1",
     "jest": "^26.6.3",
     "next-sitemap": "^1.6.25",
+    "postcss": "^8.2.13",
     "prettier": "^2.2.1",
     "stylelint": "^13.12.0",
     "stylelint-config-standard": "^21.0.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.2"
   }
 }
